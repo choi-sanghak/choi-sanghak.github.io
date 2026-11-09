@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=kelly-light-logo-20261109">
+  <link rel="stylesheet" href="./styles.css?v=kelly-photo-20261109">
 </head>
 <body>
   <a class="skip" href="#about">본문으로 이동</a>
@@ -17,11 +17,9 @@
     <div class="shell masthead">
       <div class="masthead-copy">
         <h1 class="site-name"><span data-i18n="name">최상학</span> <span class="roman">Sanghak Choi</span></h1>
-        <div class="affiliation">
-          <img class="logo" src="./assets/yonsei-seal.png" width="32" height="32" alt="연세대학교 심볼">
-          <p class="site-subtitle" data-i18n="heroRole">연세대학교 미래캠퍼스 경영학부 조교수 · 재무학</p>
-        </div>
+        <p class="site-subtitle" data-i18n="heroRole">연세대학교 미래캠퍼스 경영학부 조교수 · 재무학</p>
       </div>
+      <img class="logo" src="./assets/yonsei-seal.png" width="54" height="54" alt="연세대학교 심볼">
     </div>
     <div class="shell nav-shell">
       <button id="menuToggle" class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="siteNav">☰ 메뉴</button>
@@ -39,13 +37,18 @@
     <section class="section intro-section" id="about">
       <div class="shell split">
         <div class="section-side"><h2 data-i18n="aboutTitle">소개</h2></div>
-        <div class="section-body">
-          <p data-i18n="aboutText">연세대학교 미래캠퍼스 경영학부에서 재무학을 연구하고 가르칩니다. 기업의 재무 의사결정과 자본시장의 정보환경을 중심으로 기업재무, 기업지배구조, 기업공시, 기후금융을 연구하며, 텍스트 분석을 활용한 실증연구에도 관심이 있습니다.</p>
-          <div class="inline-links">
-            <a href="#research" data-i18n="seeResearch">연구</a>
-            <a href="./Sanghak_Choi_CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="seeCv">CV</a>
-            <a href="https://msb.yonsei.ac.kr/msb/faculty/professor01.do" target="_blank" rel="noopener noreferrer" data-i18n="faculty">학부 교수진 소개</a>
+        <div class="section-body about-layout">
+          <div class="about-copy">
+            <p data-i18n="aboutText">연세대학교 미래캠퍼스 경영학부에서 재무학을 연구하고 가르칩니다. 기업의 재무 의사결정과 자본시장의 정보환경을 중심으로 기업재무, 기업지배구조, 기업공시, 기후금융을 연구하며, 텍스트 분석을 활용한 실증연구에도 관심이 있습니다.</p>
+            <div class="inline-links">
+              <a href="#research" data-i18n="seeResearch">연구</a>
+              <a href="./Sanghak_Choi_CV.pdf" target="_blank" rel="noopener noreferrer" data-i18n="seeCv">CV</a>
+              <a href="https://msb.yonsei.ac.kr/msb/faculty/professor01.do" target="_blank" rel="noopener noreferrer" data-i18n="faculty">학부 교수진 소개</a>
+            </div>
           </div>
+          <figure class="about-portrait">
+            <img id="facultyPortrait" class="profile-photo" src="https://msb.yonsei.ac.kr/_attach/image/2023/03/thumb_AFGmDLxtcZppUFGKJCnb.jpg" alt="최상학 교수 프로필 사진" loading="lazy" decoding="async" width="240" height="290">
+          </figure>
         </div>
       </div>
     </section>
@@ -103,8 +106,8 @@
           <div class="cv-group"><h3 data-i18n="academicServices">학술활동</h3>
             <div class="cv-row"><strong>Associate Editor</strong><span>Journal of Derivatives and Quantitative Studies</span><span class="subtle">2026 to Present</span></div>
             <div class="cv-row"><strong>Associate Editor</strong><span>Humanities and Social Sciences Communications</span><span class="subtle">2026 to Present</span></div>
-            <div class="cv-row"><strong>Director</strong><span>Korean Finance Association</span><span class="subtle">2026 to Present</span></div>
-            <div class="cv-row"><strong>Academic Committee Member</strong><span>Korean Association of Financial Engineering</span><span class="subtle">2024 to Present</span></div>
+            <div class="cv-row"><strong data-i18n="financeDirector">이사</strong><span data-i18n="financeAssociation">한국재무학회</span><span class="subtle" data-i18n="financeTenure">2026년 ~ 현재</span></div>
+            <div class="cv-row"><strong data-i18n="engineeringCommittee">학술위원</strong><span data-i18n="engineeringAssociation">한국금융공학회</span><span class="subtle" data-i18n="engineeringTenure">2024년 ~ 현재</span></div>
           </div>
           <div class="cv-group"><h3 data-i18n="awards">수상</h3>
             <div class="cv-row"><strong>UNIST Best Research Award (UBRA)</strong><span>2022</span></div>
@@ -128,6 +131,6 @@
     </section>
   </main>
   <footer class="footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> Sanghak Choi · Yonsei University</span><a href="#home" data-i18n="backTop">맨 위로</a></div></footer>
-  <script src="./app.js?v=kelly-light-20261109" defer></script>
+  <script src="./app.js?v=kelly-photo-20261109" defer></script>
 </body>
 </html>
