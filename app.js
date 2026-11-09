@@ -9,18 +9,3 @@ function render(){const q=document.getElementById('paperSearch').value.trim().to
 function setLang(next){lang=next;document.documentElement.lang=lang;document.title=lang==='ko'?'최상학 | 재무학 | 연세대학교':'Sanghak Choi | Finance | Yonsei University';document.querySelectorAll('[data-i18n]').forEach(x=>x.textContent=(lang==='en'&&en[x.dataset.i18n])||originals[x.dataset.i18n]);document.getElementById('langSwitch').textContent=lang==='ko'?'English':'한국어';document.getElementById('paperSearch').placeholder=lang==='ko'?'논문 제목, 저자, 학술지 검색':'Search title, author, journal';document.getElementById('yearFilter').querySelector('option[value="all"]').textContent=lang==='ko'?'전체 연도':'All years';if(papers.publications.length)render();}
 document.getElementById('langSwitch').addEventListener('click',()=>setLang(lang==='ko'?'en':'ko'));document.getElementById('paperSearch').addEventListener('input',()=>papers.publications.length&&render());document.getElementById('yearFilter').addEventListener('change',()=>papers.publications.length&&render());document.getElementById('menuToggle').addEventListener('click',function(){const on=document.getElementById('siteNav').classList.toggle('open');this.setAttribute('aria-expanded',String(on))});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('siteNav').classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
 fetch('./publications.json').then(r=>{if(!r.ok)throw Error('Unable to load publications');return r.json()}).then(d=>{papers=d;const select=document.getElementById('yearFilter');[...new Set(d.publications.map(p=>p.year))].sort((a,b)=>b-a).forEach(year=>{const o=elem('option',null,String(year));o.value=String(year);select.appendChild(o)});render()}).catch(err=>{console.error(err);document.getElementById('publications').appendChild(elem('p','subtle','논문 데이터를 불러오지 못했습니다.'))});
-const portrait = document.getElementById('facultyPortrait');
-if (portrait) {
-  let triedAlternateHost = false;
-  const handlePortraitError = () => {
-    if (!triedAlternateHost) {
-      triedAlternateHost = true;
-      portrait.src = 'https://ycms.yonsei.ac.kr/_attach/image/2023/03/thumb_AFGmDLxtcZppUFGKJCnb.jpg';
-    } else {
-      portrait.closest('.about-portrait')?.remove();
-      document.querySelector('.about-layout')?.classList.add('photo-unavailable');
-    }
-  };
-  portrait.addEventListener('error', handlePortraitError);
-  if (portrait.complete && portrait.naturalWidth === 0) handlePortraitError();
-}
