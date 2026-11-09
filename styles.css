@@ -3,7 +3,7 @@
 :root { color-scheme:light; --ink:#24272c; --secondary:#69747d; --link:#254c71; --paper:#fff; }
 *, *::before, *::after { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:24px; }
-body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.86 'Noto Sans KR',sans-serif; -webkit-font-smoothing:antialiased; }
+body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.86 'Times New Roman','Noto Sans KR',serif; -webkit-font-smoothing:antialiased; }
 button, input, select { font:inherit; }
 button { cursor:pointer; }
 a { text-decoration:none; color:inherit; }
@@ -14,13 +14,12 @@ h2 { font-size:20px; font-weight:700; line-height:1.5; letter-spacing:.035em; }
 h3 { font-size:15px; font-weight:700; line-height:1.65; }
 .shell { width:min(930px,calc(100% - 68px)); margin:0 auto; }
 .site-header { padding:60px 0 0; background:var(--paper); }
-.masthead { display:flex; align-items:flex-start; justify-content:space-between; gap:32px; }
+.masthead { display:block; }
 .masthead-copy { min-width:0; flex:1; }
 .site-name { letter-spacing:.025em; }
 .roman { display:inline-block; margin-left:12px; color:#596672; font-size:20px; font-weight:400; letter-spacing:0; }
 html[lang="en"] .roman { display:none; }
 .site-subtitle { color:#454f57; font-size:15px; margin-top:7px; }
-.logo { width:54px; height:54px; flex-shrink:0; object-fit:contain; }
 .nav-shell { margin-top:33px; }
 .nav { display:flex; align-items:center; flex-wrap:wrap; gap:29px; }
 .nav a, .lang-switch { font-size:15px; }
@@ -94,7 +93,6 @@ html[lang="en"] .roman { display:none; }
 @media (max-width:750px) {
   .shell { width:calc(100% - 38px); }
   .site-header { padding-top:31px; }
-  .logo { width:43px; height:43px; }
   .roman { display:block; margin:1px 0 0; font-size:15px; }
   html[lang="en"] .roman { display:none; }
   .nav-shell { margin-top:17px; }
