@@ -14,12 +14,14 @@ h2 { font-size:20px; font-weight:700; line-height:1.5; letter-spacing:.035em; }
 h3 { font-size:15px; font-weight:700; line-height:1.65; }
 .shell { width:min(930px,calc(100% - 68px)); margin:0 auto; }
 .site-header { padding:60px 0 0; background:var(--paper); }
-.masthead { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.masthead { display:block; }
+.masthead-copy { width:100%; }
+.affiliation { display:flex; align-items:center; gap:11px; margin-top:12px; }
 .site-name { letter-spacing:.025em; }
 .roman { display:inline-block; margin-left:12px; color:#596672; font-size:20px; font-weight:400; letter-spacing:0; }
 html[lang="en"] .roman { display:none; }
-.site-subtitle { color:#454f57; font-size:15px; margin-top:6px; }
-.logo { width:60px; height:60px; flex-shrink:0; object-fit:contain; }
+.site-subtitle { color:#454f57; font-size:15px; margin:0; }
+.logo { width:32px; height:32px; flex-shrink:0; object-fit:contain; }
 .nav-shell { margin-top:33px; }
 .nav { display:flex; align-items:center; flex-wrap:wrap; gap:29px; }
 .nav a, .lang-switch { font-size:15px; }
@@ -89,10 +91,10 @@ html[lang="en"] .roman { display:none; }
 @media (max-width:750px) {
   .shell { width:calc(100% - 38px); }
   .site-header { padding-top:31px; }
-  .logo { width:48px; height:48px; }
+  .logo { width:30px; height:30px; }
   .roman { display:block; margin:1px 0 0; font-size:15px; }
   html[lang="en"] .roman { display:none; }
-  .site-subtitle { margin-top:7px; }
+  .affiliation { margin-top:9px; gap:9px; }
   .nav-shell { margin-top:17px; }
   .menu-toggle { display:inline-block; font-size:15px; }
   .nav { display:none; flex-direction:column; align-items:flex-start; gap:11px; margin-top:17px; }
