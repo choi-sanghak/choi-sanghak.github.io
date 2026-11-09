@@ -34,7 +34,7 @@ html[lang="en"] .roman { display:none; }
 .split { display:block; }
 .section-side h2 { margin-bottom:18px; }
 .section-body p { max-width:840px; }
-.about-layout { display:grid; grid-template-columns:minmax(0,1fr) 240px; gap:50px; align-items:start; }
+.about-layout { display:grid; grid-template-columns:minmax(0,1fr) 170px; gap:50px; align-items:start; }
 .about-copy { min-width:0; }
 .about-portrait { margin:0; width:100%; }
 .profile-photo { display:block; width:100%; height:auto; object-fit:contain; }
@@ -104,7 +104,7 @@ html[lang="en"] .roman { display:none; }
   .section { padding-top:49px; }
   .intro-section { padding-top:57px; }
   .about-layout { grid-template-columns:1fr; gap:25px; }
-  .about-portrait { max-width:240px; }
+  .about-portrait { max-width:150px; }
   .grid.three, .grid.two, .cv-columns, .contact-grid { grid-template-columns:1fr; gap:23px; }
   .filter-row { flex-wrap:wrap; gap:12px; }
   .filter-row input { flex-basis:60%; }
