@@ -3,7 +3,7 @@
 :root { color-scheme:light; --ink:#24272c; --secondary:#69747d; --link:#254c71; --paper:#fff; }
 *, *::before, *::after { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:24px; }
-body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.86 'Times New Roman','Noto Sans KR',serif; -webkit-font-smoothing:antialiased; }
+body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.86 'Open Sans','Noto Sans KR',sans-serif; -webkit-font-smoothing:antialiased; }
 button, input, select { font:inherit; }
 button { cursor:pointer; }
 a { text-decoration:none; color:inherit; }
@@ -117,3 +117,14 @@ html[lang="en"] .roman { display:none; }
   a { color:inherit; }
 }
 .about-layout.photo-unavailable { grid-template-columns:1fr; }
+
+/* Reference-inspired English typography: condensed Oswald headings,
+   clean Open Sans body; Korean glyphs fall back to Noto Sans KR. */
+.roman { font-family:'Oswald','Open Sans',sans-serif; }
+html[lang="en"] .site-name,
+html[lang="en"] h2,
+html[lang="en"] .subsection-header h3 {
+  font-family:'Oswald','Open Sans',sans-serif;
+  font-weight:500;
+  letter-spacing:.025em;
+}
