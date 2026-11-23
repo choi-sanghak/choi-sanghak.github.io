@@ -21,7 +21,9 @@ const en={name:'Sanghak Choi',navHome:'About',navResearch:'Research',navTeaching
   bestPaperAward: 'Best Paper Award',
   bestPaperAwardSource: 'Korean Academic Society of Business Administration, 2021',
   researchAwardYear: '2022',
-  footerAffiliation: 'Sanghak Choi · Yonsei University'
+  footerAffiliation: 'Sanghak Choi · Yonsei University',
+  workingPapersTitle: 'Working Papers',
+  emailLabel: 'Email'
 };
 const originals={};document.querySelectorAll('[data-i18n]').forEach(x=>originals[x.dataset.i18n]??=x.textContent);
 function elem(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x;}
